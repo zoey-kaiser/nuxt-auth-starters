@@ -4,7 +4,7 @@ import type { UserData } from '~/server/users'
 import { DEMO_USERS } from '~/server/users'
 
 export const SECRET = 'dummy'
-export const EXPIRY_TIME = 15
+export const EXPIRY_TIME = 60
 
 const loginBodySchema = z.object({
   email: z.string().email(),

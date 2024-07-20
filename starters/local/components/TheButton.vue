@@ -6,6 +6,7 @@ type ButtonSize = 'xs' | 'sm' | 'md' | 'lg'
 withDefaults(defineProps<{
   href?: string
   size?: ButtonSize
+  external?: boolean
 }>(), { size: 'md' })
 defineEmits<{ (e: 'click'): void }>()
 
@@ -18,7 +19,7 @@ const buttonSizeClasses: Record<ButtonSize, string> = {
 </script>
 
 <template>
-  <component :is="href ? NuxtLink : 'div'" :href="href" target="_blank">
+  <component :is="href ? NuxtLink : 'div'" :href="href" :target="external ? '_blank' : ''">
     <button
       type="button"
       class="rounded bg-indigo-600 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"

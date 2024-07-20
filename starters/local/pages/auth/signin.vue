@@ -30,14 +30,8 @@ async function submit() {
         Sign in
       </h2>
       <p class="text-center font-light leading-6">
-        You can sign in using the email
-        <span>
-          jsmith@auth.com
-        </span>
-        and the password
-        <span>
-          hunter2
-        </span>
+        You can sign in using the email jsmith@auth.com and the password hunter2.
+        Sessions last for <span class="font-semibold">60 seconds!</span>
       </p>
     </div>
     <div class="grid gap-4 md:grid-cols-2 md:gap-2">

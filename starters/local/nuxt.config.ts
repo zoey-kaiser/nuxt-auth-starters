@@ -31,6 +31,11 @@ export default defineNuxtConfig({
         },
         dataResponsePointer: '/'
       }
+    },
+    globalAppMiddleware: true,
+    sessionRefresh: {
+      enableOnWindowFocus: true,
+      enablePeriodically: 10000
     }
   },
   build: {

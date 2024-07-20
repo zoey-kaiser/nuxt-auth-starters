@@ -25,7 +25,7 @@ defineProps<{
         </strong>
         {{ text }}
       </p>
-      <TheButton v-if="button" size="xs" :href="button.href">
+      <TheButton v-if="button" size="xs" :href="button.href" :external="true">
         {{ button.text }}
       </TheButton>
     </div>
