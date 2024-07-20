@@ -5,6 +5,13 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@sidebase/nuxt-auth'
   ],
+  auth: {
+    globalAppMiddleware: {
+      isEnabled: true,
+      allow404WithoutAuth: true,
+      addDefaultCallbackUrl: true,
+    }
+  },
   typescript: {
     shim: false
   }
