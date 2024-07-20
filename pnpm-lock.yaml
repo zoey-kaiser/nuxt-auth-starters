@@ -30,8 +30,8 @@ importers:
         specifier: ^6.11.4
         version: 6.12.1(magicast@0.3.4)(rollup@4.19.0)
       '@sidebase/nuxt-auth':
-        specifier: ^0.7.2
-        version: 0.7.2(magicast@0.3.4)(next-auth@4.21.1(next@13.5.6(@babel/core@7.24.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(rollup@4.19.0)
+        specifier: ^0.8.1
+        version: 0.8.1(magicast@0.3.4)(next-auth@4.21.1(next@13.5.6(@babel/core@7.24.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(rollup@4.19.0)
       '@types/node':
         specifier: ^20.11.30
         version: 20.14.11
@@ -1292,11 +1292,6 @@ packages:
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
-
-  '@sidebase/nuxt-auth@0.7.2':
-    resolution: {integrity: sha512-0f/DxRvDKFBwg5jR85KMeuVGQSygnDl3LOFeXnEHOS3A9SnJLE8najNooq7DbQB6lB8dl+vDpguVNH+V92TiHg==}
-    peerDependencies:
-      next-auth: ~4.21.1
 
   '@sidebase/nuxt-auth@0.8.1':
     resolution: {integrity: sha512-zNUoWPiHrnFMW7Skgu77UCHM0mR02/GPKHlgs4ulboGYHbkKbFkLj6/44jbuBqDE1ZH2Pg4UJnHj8DAw6XPrwQ==}
@@ -5957,39 +5952,6 @@ snapshots:
     optional: true
 
   '@rtsao/scc@1.1.0': {}
-
-  '@sidebase/nuxt-auth@0.7.2(magicast@0.3.4)(next-auth@4.21.1(next@13.5.6(@babel/core@7.24.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(rollup@4.19.0)':
-    dependencies:
-      '@nuxt/kit': 3.12.4(magicast@0.3.4)(rollup@4.19.0)
-      defu: 6.1.4
-      h3: 1.12.0
-      knitwork: 1.1.0
-      next-auth: 4.21.1(next@13.5.6(@babel/core@7.24.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      nitropack: 2.9.7(magicast@0.3.4)
-      requrl: 3.0.2
-      ufo: 1.5.4
-    transitivePeerDependencies:
-      - '@azure/app-configuration'
-      - '@azure/cosmos'
-      - '@azure/data-tables'
-      - '@azure/identity'
-      - '@azure/keyvault-secrets'
-      - '@azure/storage-blob'
-      - '@capacitor/preferences'
-      - '@libsql/client'
-      - '@netlify/blobs'
-      - '@planetscale/database'
-      - '@upstash/redis'
-      - '@vercel/kv'
-      - better-sqlite3
-      - drizzle-orm
-      - encoding
-      - idb-keyval
-      - magicast
-      - rollup
-      - supports-color
-      - uWebSockets.js
-      - xml2js
 
   '@sidebase/nuxt-auth@0.8.1(magicast@0.3.4)(next-auth@4.21.1(next@13.5.6(@babel/core@7.24.9)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(rollup@4.19.0)':
     dependencies:
