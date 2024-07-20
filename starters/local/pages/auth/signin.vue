@@ -41,7 +41,7 @@ async function submit() {
       </p>
     </div>
     <div class="grid gap-4 md:grid-cols-2 md:gap-2">
-      <div class="bg-white px-6 py-8 shadow sm:rounded-lg">
+      <div class="bg-white px-6 py-8 shadow-sm sm:rounded-lg border">
         <form class="space-y-6" action="#" method="POST" @submit="submit">
           <div class="FormInput">
             <label for="email">
