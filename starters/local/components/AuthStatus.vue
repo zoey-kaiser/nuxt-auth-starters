@@ -1,3 +1,7 @@
+<script lang="ts" setup>
+const { status, token, lastRefreshedAt, data } = useAuth()
+</script>
+
 <template>
   <div>
     <h1 class="text-3xl font-semibold">
@@ -8,7 +12,8 @@
     </p>
   </div>
 
-  <DataViewer><span>Status:</span> unauthenticated</DataViewer>
-  <DataViewer><span>Status:</span> unauthenticated</DataViewer>
-  <DataViewer><span>Status:</span> unauthenticated</DataViewer>
+  <DataViewer><span>Status:</span> {{ status }}</DataViewer>
+  <DataViewer><span>Last refresh:</span> {{ lastRefreshedAt ?? 'N/A' }}</DataViewer>
+  <DataViewer><span>Token:</span> {{ token ?? 'N/A' }}</DataViewer>
+  <DataViewer><span>Session Data:</span> {{ data ?? 'N/A' }}</DataViewer>
 </template>

@@ -1,8 +1,26 @@
 <script lang="ts" setup>
+definePageMeta({
+  auth: {
+    unauthenticatedOnly: true,
+    navigateAuthenticatedTo: '/'
+  }
+})
+
+const { signIn } = useAuth()
+
+const error = ref<string | undefined>(undefined)
 const formData = ref({
   email: '',
   password: ''
 })
+
+async function submit() {
+  signIn(formData.value, { callbackUrl: '/', external: true }).catch((e) => {
+    if (e instanceof Error) {
+      error.value = e.message
+    }
+  })
+}
 </script>
 
 <template>
@@ -24,7 +42,7 @@ const formData = ref({
     </div>
     <div class="grid gap-4 md:grid-cols-2 md:gap-2">
       <div class="bg-white px-6 py-8 shadow sm:rounded-lg">
-        <form class="space-y-6" action="#" method="POST">
+        <form class="space-y-6" action="#" method="POST" @submit="submit">
           <div class="FormInput">
             <label for="email">
               Email:
@@ -49,9 +67,13 @@ const formData = ref({
             >
           </div>
 
-          <TheButton size="lg">
+          <TheButton size="lg" @click="submit">
             Sign in
           </TheButton>
+
+          <div v-if="error" class="bg-red-400 p-3 text-white rounded">
+            {{ error }}
+          </div>
         </form>
       </div>
       <DataViewer

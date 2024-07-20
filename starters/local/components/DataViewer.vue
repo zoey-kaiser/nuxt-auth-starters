@@ -22,13 +22,13 @@ defineEmits(['reset', 'fill'])
         </TheButton>
       </div>
     </header>
-    <pre><slot /></pre>
+    <pre><ClientOnly><slot /></ClientOnly></pre>
   </div>
 </template>
 
 <style>
 pre {
-  @apply my-0 p-3 rounded shadow overflow-x-auto;
+  @apply my-0 p-3 rounded shadow overflow-x-auto min-h-12;
 }
 
 pre span {
