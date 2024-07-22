@@ -6,6 +6,10 @@ export default defineNuxtConfig({
     '@sidebase/nuxt-auth'
   ],
   auth: {
+    provider: {
+      type: 'authjs',
+      defaultProvider: 'github'
+    },
     globalAppMiddleware: {
       isEnabled: true,
       allow404WithoutAuth: true,
