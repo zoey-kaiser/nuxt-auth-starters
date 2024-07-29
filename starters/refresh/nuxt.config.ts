@@ -20,7 +20,8 @@ export default defineNuxtConfig({
                 login: '/auth/signin'
             },
             token: {
-                signInResponseTokenPointer: '/token/accessToken'
+                signInResponseTokenPointer: '/token/accessToken',
+                maxAgeInSeconds: 60,
             },
             refreshToken: {
                 signInResponseRefreshTokenPointer: '/token/refreshToken',

@@ -5,6 +5,7 @@ import { DEMO_USERS, DEMO_USERS_REFRESH } from '~/server/users'
 
 export const SECRET = 'dummy'
 export const EXPIRY_TIME = 60
+export const REFRESH_EXPIRY_TIME = 60 * 60 * 24 * 30 // 30 days
 
 const loginBodySchema = z.object({
     refreshToken: z.string(),
@@ -37,7 +38,7 @@ export default eventHandler(async (event) => {
     }
 
     const accessToken = sign({ ...user, scope: ['user'] }, SECRET, { expiresIn: EXPIRY_TIME })
-    const refreshToken = sign({ ...user, scope: ['refresh'] }, SECRET, { expiresIn: EXPIRY_TIME })
+    const refreshToken = sign({ ...user, scope: ['refresh'] }, SECRET, { expiresIn: REFRESH_EXPIRY_TIME })
     
     userRefreshData.refreshToken = refreshToken
 
