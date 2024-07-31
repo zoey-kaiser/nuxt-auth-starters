@@ -21,7 +21,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^2.11.5",
     "@nuxtjs/tailwindcss": "^6.11.4",
-    "@sidebase/nuxt-auth": "^0.8.1",
+    "@sidebase/nuxt-auth": "1.0.0-alpha.0",
     "@types/node": "^20.11.30",
     "eslint": "^8.57.0",
     "oxlint": "^0.2.15",
@@ -29,6 +29,6 @@
     "vue-tsc": "^2.0.7"
   },
   "peerDependencies": {
-    "next-auth": "4.21.1"
+    "@auth/core": "^0.34.1"
   }
 }
