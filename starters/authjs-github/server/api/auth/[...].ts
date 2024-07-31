@@ -1,5 +1,5 @@
-import CredentialsProvider from 'next-auth/providers/credentials'
-import GithubProvider from 'next-auth/providers/github'
+import CredentialsProvider from '@auth/core/providers/credentials'
+import GithubProvider from '@auth/core/providers/github'
 import { NuxtAuthHandler } from '#auth'
 
 export default NuxtAuthHandler({
@@ -8,13 +8,11 @@ export default NuxtAuthHandler({
     signIn: '/auth/signin'
   },
   providers: [
-    // @ts-expect-error You need to use .default here for it to work during SSR. May be fixed via Vite at some point
-    GithubProvider.default({
+    GithubProvider({
       clientId: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GITHUB_CLIENT_SECRET
     }),
-    // @ts-expect-error You need to use .default here for it to work during SSR. May be fixed via Vite at some point
-    CredentialsProvider.default({
+    CredentialsProvider({
       name: 'Credentials',
       credentials: {
         email: { label: 'Email', type: 'text', placeholder: '(hint: jsmith@auth.com)' },
