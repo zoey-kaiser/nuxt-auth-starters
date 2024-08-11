@@ -1,27 +1,52 @@
-# NuxtAuth Starters
+# local-app
 
-This repository contains a collection of `@sidebase/nuxt-auth` starters that cover several use cases for NuxtAuth. You can use one of these templates as a starting point for your application, or to create a reproduction of an issue that you are currently encountering.
+This is a [sidebase merino](https://sidebase.io/) app created by running `pnpm create sidebase@latest`. This project uses the following technologies for a great developer- and user-experience:
+- [TypeScript](https://www.typescriptlang.org/)
+- [Nuxt 3](https://nuxt.com)
+- Tailwind CSS
+- nuxt-auth
+- Linting via ESLint and @antfu/eslint-config
 
-## Overview
+## How to get going?
 
-This repository current contains the following starters:
+This is a straight-forward setup with minimal templating and scaffolding. The options you selected during the sidebase CLI setup are all here though. Good places to continue reading are:
+- [the First Steps documentation](https://sidebase.io/sidebase/usage)
+- [our discord](https://discord.gg/auc8eCeGzx)
 
-## Local starter
+Some tasks you should probably do in the beginning are:
+- [ ] replace this generic README with a more specific one
+- [ ] install the Vue Volar extension
+- [ ] enable [Volar takeover mode](https://nuxt.com/docs/getting-started/installation#prerequisites) to ensure a smooth editor setup
+- [ ] [install Nuxt 3 devtools](https://github.com/nuxt/devtools#installation) if you want to use them
+- [ ] Auth: Configure your auth providers to the [NuxtAuthHandler](./server/api/auth/[...].ts)
+- [ ] Auth, optional: Enable global protection by setting `enableGlobalAppMiddleware: true` in [your nuxt.config.ts](./nuxt.config.ts). Delete the local middleware in the [protected.vue](./pages/protected.vue) page if you do
 
-The `local` starter contains a basic `@sidebase/nuxt-auth` starter with the local provider setup. `local` is best when you already have a backend that accepts username + password as a login or want to build a static application. You can read more about the `local` provider [here](https://auth.sidebase.io/guide/local/quick-start).
+### Setup
 
-This starter connects to a mocked Nuxt server api that handles: `signIn`, `signOut` and `getSession`.
+Make sure to install the dependencies:
 
-View the starter [here](/starters/local/).
+```bash
+pnpm install
+```
 
-## AuthJS starter (with GitHub)
+### Development Server
 
-The `authjs-github` starter contains a basic `@sidebase/nuxt-auth` starter with the `authjs` provider setup with a GitHub OAuth provider, preconfigured. `authjs` is best suited for plug-and-play OAuth for established oauth-providers or magic-url based sign-ins. You can read more about the `authjs` provider [here](https://auth.sidebase.io/guide/authjs/quick-start).
+Start the development server on http://localhost:3000
 
-View the starter [here](/starters/authjs-github/).
+```bash
+pnpm run dev
+```
 
-## Contributing
+### Production
 
-If you would like to add another starter, please first open an issue, where you either share the idea for the starter, if it does not exist yet, or link to a public repository containing the starter. After agreeing on the implementation of the starter, you can open a new pull request to add it. 
+Build the application for production:
 
-Contributions that update any package versions of the starters are always appreciated!
+```bash
+pnpm run build
+```
+
+Locally preview production build:
+
+```bash
+pnpm run preview
+```

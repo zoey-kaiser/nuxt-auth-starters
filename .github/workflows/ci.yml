@@ -1,0 +1,38 @@
+name: nodejs CI
+
+on:
+  push:
+    branches: [main, authjs]
+  pull_request:
+    branches: [main, authjs]
+
+env:
+  NODE_VER: 22.5
+
+jobs:
+  test-module:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          run_install: false
+
+      - name: Use Node.js ${{ env.NODE_VER }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VER }}
+          cache: 'pnpm'
+
+      - name: Install deps
+        run: pnpm i
+
+      # Check linting and typing
+      - run: pnpm lint
+      - run: pnpm typecheck
+
+      # Check building
+      - run: pnpm build
