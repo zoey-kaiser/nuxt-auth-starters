@@ -1,4 +1,4 @@
-# local-app
+# NuxtAuth - AuthJS Starter
 
 This is a [sidebase merino](https://sidebase.io/) app created by running `pnpm create sidebase@latest`. This project uses the following technologies for a great developer- and user-experience:
 - [TypeScript](https://www.typescriptlang.org/)
