@@ -8,6 +8,8 @@ This repository current contains the following starters:
 
 ## Local starter
 
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/zoey-kaiser/nuxt-auth-starters/tree/main/starters/local?file=nuxt.config.ts)
+
 The `local` starter contains a basic `@sidebase/nuxt-auth` starter with the local provider setup. `local` is best when you already have a backend that accepts username + password as a login or want to build a static application. You can read more about the `local` provider [here](https://auth.sidebase.io/guide/local/quick-start).
 
 This starter connects to a mocked Nuxt server api that handles: `signIn`, `signOut` and `getSession`.
@@ -15,6 +17,8 @@ This starter connects to a mocked Nuxt server api that handles: `signIn`, `signO
 View the starter [here](/starters/local/).
 
 ## AuthJS starter (with GitHub)
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/zoey-kaiser/nuxt-auth-starters/tree/main/starters/authjs-github?file=nuxt.config.ts)
 
 The `authjs-github` starter contains a basic `@sidebase/nuxt-auth` starter with the `authjs` provider setup with a GitHub OAuth provider, preconfigured. `authjs` is best suited for plug-and-play OAuth for established oauth-providers or magic-url based sign-ins. You can read more about the `authjs` provider [here](https://auth.sidebase.io/guide/authjs/quick-start).
 
