@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./starters/local
+        working-directory: starters/local
 
     steps:
       - uses: actions/checkout@v4

@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./starters/authjs-github
+        working-directory: starters/authjs-github
 
     steps:
       - uses: actions/checkout@v4
