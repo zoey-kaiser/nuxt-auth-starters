@@ -1,9 +1,0 @@
-{
-  "name": "nuxt-auth-examples",
-  "version": "0.8.1",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "test": "echo 'Hello!'"
-  }
-}
