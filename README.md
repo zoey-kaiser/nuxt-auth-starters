@@ -1,6 +1,6 @@
-# NuxtAuth Starters
+# `@sidebase/nuxt-auth` Starters
 
-This repository contains a collection of `@sidebase/nuxt-auth` starters that cover several use cases for NuxtAuth. You can use one of these templates as a starting point for your application, or to create a reproduction of an issue that you are currently encountering.
+This repository contains a collection of [`@sidebase/nuxt-auth`](https://github.com/sidebase/nuxt-auth) starters that cover several use cases for NuxtAuth. You can use one of these templates as a starting point for your application, or to create a reproduction of an issue that you are currently encountering.
 
 ## Overview
 
