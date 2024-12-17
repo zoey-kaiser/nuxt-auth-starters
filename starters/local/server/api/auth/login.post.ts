@@ -1,6 +1,6 @@
+import type { UserData } from '~/server/users'
 import { sign } from 'jsonwebtoken'
 import { z } from 'zod'
-import type { UserData } from '~/server/users'
 import { DEMO_USERS } from '~/server/users'
 
 export const SECRET = 'dummy'
