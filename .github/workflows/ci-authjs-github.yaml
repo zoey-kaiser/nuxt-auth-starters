@@ -1,4 +1,4 @@
-name: CI/authjs-github
+name: CI-authjs-github
 
 on:
   pull_request:
@@ -9,6 +9,9 @@ on:
 jobs:
   lint-typecheck-build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./starters/authjs-github
 
     steps:
       - uses: actions/checkout@v4
@@ -24,7 +27,19 @@ jobs:
         with:
           version: ${{ env.PNPM_VERSION }}
 
-      - run: cd ./starters/authjs-github
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - uses: actions/cache@v4
+        name: Setup pnpm cache
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
       - run: pnpm install
       - run: pnpm lint
       - run: pnpm typecheck
